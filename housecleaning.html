@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cleanova - Volunteer Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-image: url(Cleaning-bg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #0077b6;
+            color: white;
+            padding: 30px 0;
+        }
+      .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0077b6;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.toggle-button {
+    font-size: 28px;
+    color: white;
+    background: none;
+    border: none;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbar-links a {
+        padding: 10px 20px;
+        width: 100%;
+        display: block;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        p {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .container {
+            margin: 50px auto;
+            max-width: 600px;
+        }
+        .modules {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            margin: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card h2 {
+            color: #023e8a;
+        }
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #0077b6;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            background-color: #023e8a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cleanova</h1>
+    <p>Connecting People for a Cleaner Community</p>
+    </header>
+<div class="container">
+    <h2>Select Your Role</h2>
+    <div class="modules">
+        <div class="card">
+            <h2>User</h2>
+            <p>Request cleaning help for your area</p>
+            <a href="userlogin.html">Login</a><br>
+            <a href="usersignup.html">Sign Up</a>
+        </div>
+        <div class="card">
+            <h2>Volunteer</h2>
+            <p>Join us in cleaning efforts</p>
+            <a href="volunteerlogin.html">Login</a><br>
+            <a href="volunteersignup.html">Sign Up</a>
+        </div>
+        <div class="card">
+            <h2>Admin</h2>
+            <p>Manage requests and volunteers</p>
+            <a href="adminlogin.html">Login</a>
+        </div>
+    </div>
+</div>
+<script>
+    function toggleMenu() {
+        var links = document.getElementById("navbarLinks");
+        links.classList.toggle("active");
+    }
+</script>
+<div id="about" class="container">
+    <h2>About Us</h2>
+    <p>Cleanova is a platform dedicated to organizing community cleaning efforts through collaboration between users, volunteers, and administrators.</p>
+</div>
+<div id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>Email: support@cleanova.org</p>
+    <p>Phone: +91 98765 43210</p>
+</div>
+
+
+<footer>
+    &copy; 2025 Cleanova. All rights reserved.
+</footer>
+
+</body>
+</html>
